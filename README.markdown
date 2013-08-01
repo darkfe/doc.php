@@ -1,3 +1,9 @@
+# 这个版本改了啥?
+
+`doc.php` 使用的`markdown`语法跟github上这种还不太一样.而且还没考虑嵌入代码的高亮.
+
+这个版本使用了(https://github.com/egil/php-markdown-extra-extended)增加了代码块支持,同时增加了代码高亮.并且把markdown样式修改成了github的样式.
+
 #doc.php
 doc.php is a PHP application that mimics a file explorer. 
 Using html5 to display audio and video and [PHP markdown by Michel Fortin](http://michelf.com/projects/php-markdown/) to parse these files into a simple but interactive file browser.
