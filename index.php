@@ -15,6 +15,7 @@ require(LIB.'template.class.php');
 require(LIB.'extension.class.php');
 require(LIB.'layout.class.php');
 require(LIB.'markdown.php');
+require(LIB.'markdown_extended.php');
 
 Extension::loadExtensions();
 $doc = new DocPHP($_GET);
