@@ -62,6 +62,14 @@ class DocPHP{
         $path = $file->getPath();
         $url = FileSystemHelper::linkTo($path, count($path->toArray()), $path->isFile());
         $name = $file->getName() . (SHOW_EXTENSIONS ? $file->getFileType() : '');
+        switch($file->getFileType()){
+            case '.md';
+                preg_match('/^#([^#]+$)/m',$file->readFile(),$matches);
+                if(isset($matches[1])){
+                    $name .= $matches[1];
+                }
+            break;
+        } 
         $text='<li class="'.$typeString.'"><span></span><a href="'.$url.'">'.$name.'</a></li>';
         array_push($listItems, $text);
       }
